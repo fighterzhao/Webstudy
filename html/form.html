@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form——attribute</title>
+</head>
+<body>
+	<p>四个页面提交方式 五个文本框属性 一个control和form和autofocus全局表单属性 一个复选框/文字域/图片属性</p>
+
+	<h1>四个与页面提交有关 formaction formmethod formectype formtarget</h1>
+	<form>
+		<p>打开的页面/打开页面提交的方式/页面编码的方式/打开页面的方式</p>
+		<input type="submit" name="s1" value="v1" formaction="http://www.baidu.com" formmethod="post" formenctype="" formtarget="_self" >提交到百度自己页面<br/>
+		<input type="submit" name="s2" value="v2" formaction="http://www.taobao.com" formmethod="get" formenctype="" formtarget="_blank">提交到淘宝新页面打开<br/>
+		<input type="submit" name="s1" value="v1" formaction="http://www.baidu.com" formmethod="post" formenctype="" formtarget="_parent" >提交到百度父页面打开<br/>
+		<input type="submit" name="s2" value="v2" formaction="http://www.taobao.com" formmethod="get" formenctype="" formtarget="_top">提交到淘宝顶层页面打开<br/>
+	</form>
+	
+	<h1>五个与提交是文本框有关 required/placeholder/datalist/autocomplete/pattern</h1>
+	<form id="testform">
+		<p>提交时候如果不输入就不能提交/也可以由提示信息/在输入的时候也可以选择/在输入的时候可以自动补全/对不符合模式的不让提交</p>
+		<input type="text" required="" placeholder="请输入文字" list="list" autocomplete="off" pattern="[A-Z]">
+		<input type="submit" name="s5" value="v5" formaction="http://www.baidu.com" formmethod="get" formenctype="" formtarget="_blank"><br/>
+		提交
+		<br/>
+		<datalist id="list">
+			<option>姓名</option>
+			<option>年龄</option>
+			<option>性别	</option>
+		</datalist>
+	</form>
+	
+	<h1>autofocus form属性让元素可写表外和自动获得光标聚焦</h1>
+	<input type="text" form="testform" autofocus="">为文本框按钮等让光标聚焦/通过form属性设置为一个表单
+
+	<h1>control属性可以访问表达元素</h1>
+	<script type="text/javascript ">
+		function setValue(){
+			var label=document.getElementById('label');
+			var textbox=label.control;
+			textbox.value='430079'
+		}
+	</script>
+	<form>
+		<label id="label">
+			邮编
+			<input type="tex" id="txt_zip" maxlength="6">
+			<small>请输入六位数字</small>
+		</label>
+		<input type="button" value="设置默认值" onclick="setValue()">
+	</form>
+
+	<h1>SelectionDirctoin文本框选取方式 indeterminate复选框 输入为图片的处理</h1>
+	<form>
+		<input type="text" >
+		<textarea>SelectionDirctoin 对input和文本框看怎么选择的</textarea>
+		<input type="checkbox" name="" indeterminate id="cb">
+		<br/>
+		<input type="image" src="timg.jpg" alt="编辑" width="200" height="200">
+	</form>
+	<script type="text/javascript">
+		var cb=document.getElementById('cb');
+		cb.indeterminate=true;
+	</script>
+
+</body>
+</html> 

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Html所有内容</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		h2{
+			color: blue
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="#">
+</head>
+<body>
+	<header id="正头头部">
+		<h1 align="center">这里是头部导航</h1>
+		<p>这里展示了这次会用到的标签</p>
+		<nav>
+			<ul>
+				<li><a href="#正文">指向正文</a></li>
+				<li><a href="#尾部">指向尾部</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article id="正文">
+		<header>
+			<h1>这里是正文导航</h1>
+			<p>正文导航显示了各个元素的使用</p>	
+			<nav>
+				<ul>
+					<li><a href="#元素">元素</a></li>
+					<li><a href="#属性">属性</a></li>
+					<li><a href="#格式化">格式化</a></li>
+					<li><a href="#样式">样式</a></li>
+					<li><a href="#链接">链接</a></li>
+					<li><a href="#表格">表格</a></li>
+					<li><a href="#列表">列表</a></li>
+					<li><a href="#块">块</a></li>
+					<li><a href="#布局">布局</a></li>
+					<li><a href="#表单">表单</a></li>
+					<li><a href="#框架">框架</a></li>
+					<li><a href="#背景">背景</a></li>
+					<li><a href="#实体">实体</a></li>
+					<li><a href="#结构元素">结构元素</a></li>
+					<li><a href="#Form表单附加属性">Form表单附加属性</a></li>
+				</ul>
+			</nav>	
+		</header>
+		<section id="元素">
+			<h2>1元素</h2>
+			<p>元素是标签和标签之间内容构成，元素嵌套指标签嵌套，元素属性指标签属性</p>
+		</section>
+		<section id="属性">
+			<h2>2属性</h2>
+			<p>属性有全局通用的属性，也有特性标签的属性</p>
+		</section>
+		<section id="格式化">
+			<h2>3格式化</h2>
+			<a href="格式化.png">格式化输入指南</a><br/>
+			<b>这是一个加粗字</b><br/>
+			<big>这是一个大号字</big><br/>
+			<small>这是一个小号子</small><br/>
+			<i>这是一个斜体字</i><br/>
+			<em>这是个着重格式</em><br/>
+			<strong>这是强调格式</strong>
+			<p>这是<sup>上标</sup>格式</p>
+			<p>这是<sub>下标</sub>格式</p>
+			<ins>这是插入格式</ins><br/>
+			<del>这是删除格式</del>
+		</section>
+		<section id="样式">
+			<h2>4样式</h2>
+			<a href="样式.png">样式类型</a>
+			<p style="color: red">外部样式link、内部样式style、内联样式当作属性写</p>
+			<p style="color: red">定义样式用对应的标签加花括号，花括号里面类似字典写出对样式的修改</p>
+		</section>
+		<section id="链接">
+			<h2>5链接</h2>
+			<a href="http://www.baidu.com" target="_blank">链接可以有四种到开放式</a>
+			<p>链接可以有四种打开方式、可以由图片链接和文字链接</p>
+			<ul>
+				<li>_self</li>
+				<li>_blank</li>
+				<li>_parent</li>
+				<li>_top</li>
+			</ul>
+			<img src="链接" width="200px" height="200px" alt="这是图片">
+		</section>
+		<section id="表格">
+			<h2>6表格</h2>
+			<a href="表格.png"></a>
+			<table border="1" cellpadding="50" cellspacing="00" bgcolor="green" background="">
+				<caption>表头</caption>
+				<tr>
+					<th>第一列</th>
+					<th>第二列</th>
+					<th bgcolor="red">第三列</th>
+				</tr>
+				<tr>
+					<td>单元格1</td>
+					<td>单元格2</td>
+					<td>单元格3</td>
+				</tr>
+				<tr>
+					<td>单元格4</td>
+					<td>单元格5</td>
+					<td>单元格6</td>
+				</tr>
+			</table>
+		</section>
+		<section id="列表">
+			<h2>7列表</h2>
+			<a href="列表.png"></a>
+			<p>列表属性值</p>
+			<ul type="">
+				<li>ul_disc</li>
+				<li>ul_square</li>
+				<li>ul_circle</li>
+				<ol>
+					<li>A_a_</li>
+					<li>I_i_start</li>
+				</ol>
+			</ul>
+			<dl>
+				<dt>自定义1</dt>
+					<dd>描述1</dd>
+				<dt>自定义2</dt>
+					<dd>描述2</dd>
+			</dl>
+		</section>
+		<section id="块">
+			<h2>8块</h2>
+			<div>
+				<span>块元素会以新行出现，内联元素不会以新行出现</span>
+			</div>
+		</section>
+		<section id="布局">
+			<h2>9布局</h2>
+		</section>
+		<section id="表单">
+			<h2>10表单</h2>
+			<a href="表单元素.png">表单元素</a>
+			<form>
+				文本框:<input type="text" required="" placeholder="输入姓名" autocomplete="" pattern=""><br/>
+				密码:<input type="password" name=""><br/>
+				<p>what do you kike?复选框<p/>
+				apple<input type="checkbox" name=""><br/>
+				orange<input type="checkbox" name=""><br/>
+				pear<input type="checkbox" name=""><br/>
+				<big>sex</big>
+				man<input type="radio" name="sex"><br/>
+				woman<input type="radio" name="sex"><br/>
+				<select>
+					<option>下拉列表1</option>
+					<option>下拉列表2</option>
+					<option>下拉列表3</option>
+				</select>
+				<input type="button" value="确定">
+				<input type="submit" value="提交">
+				<a href="form.html">点击查看更多属性</a>
+			</form>
+		</section>
+		<section id="框架">
+			<h2>11框架</h2>
+			<frameset  cols="20%,80%">
+				<frames src="#"></frame>
+				<frames src="#"></frame>
+			</frameset>
+			<iframe src="frame.html" frameborder="1" width="400px" height="400px"></iframe>
+			<p>以前是框架集合，现在是内联框架</p>
+		</section>
+		<section id="背景">
+			<h2>12背景</h2>
+			<ul>
+				<li>bgcolor</li>
+				<li>backgrounds</li>
+			</ul>
+		</section>
+		<section id="实体">
+			<h2>13实体</h2>
+			<p>需要转换才能正常显示</p>
+			abcd&lt;html&rt;
+		</section>
+		<section id="结构元素">
+			<h2>14结构元素</h2>
+			<a href="element.html">结构元素</a>
+		</section>
+		<section id="Form表单附加属性">
+			<h2>15Form表单附加属性</h2>
+			<a href="form.html">form属性</a>
+		</section>
+		<footer>
+			<h2>后记</h2>
+			<p>学习这些真不容易</p>
+		</footer>
+	</article>
+	<footer id="尾部">
+		<address>
+			<p>作者信息</p>
+			<p>版权保护</p>
+		</address>
+	</footer>
+</body>
+</html>
