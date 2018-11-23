@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inline、block、inline-block的区别</title>
+        <style>
+        * {
+        	margin: 0;
+            padding: 0;
+        }            
+        #box {
+            width: 500px;
+            margin: 100px auto 0 auto;
+            border: 1px solid red;
+        }
+             
+        #a, #b, #c,#d {
+            width: 100px;
+            height: 100px;
+            margin: 2px;
+        }
+        #a {
+            background: #ccc;
+            float: left;
+        }
+        #p{
+        	clear: left;
+
+        }
+        #b {
+            background: #666;  
+                float: right;      
+        }
+        #c {
+            background: blue;
+         
+       
+        }
+        #d {
+            background: green;
+        }
+         </style>
+</head>
+<body>
+	<div id="box" class="clearfix">
+		<div id="a"></div>
+		<p id="p">绝对定位是彻底从文档流中删除，右面的元素该怎么布局就怎么布局，不影响，可以使得不同块级元素位于一行，删除块与标准流块，删除块可以重叠</p>
+        <div id="b">
+        </div>
+        <div id="c"></div>  
+        <p id="p1">浮动以某种方式从文档流中删除，使得不同块级元素可以位于一行（浮动块与标准流块）浮动块不重叠，不影响指的是后面的元素会上来占据删除的浮动元素的位置，影像指的是对块元素内部文字不会产生遮挡</p>  
+        <div id="d"></div>
+
+</body>
+</html>

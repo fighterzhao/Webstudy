@@ -1,0 +1,31 @@
+.class{
+	color: green
+}
+p.class{
+	color: red
+}
+#id{
+	color:red
+}
+section#pai p{
+	color: green
+}
+[title]{
+	color: green
+}
+#cli1{
+	background-color:yellow
+}
+#cli2{
+	background-color:#00ff00
+}
+#cli3{
+	background-color:rgb(250,0,250)
+}
+#cli4{
+	background-color:rgb(25%,20%,45%)
+}
+#cli5{
+	background-color:yellow;
+	padding: 20px
+}

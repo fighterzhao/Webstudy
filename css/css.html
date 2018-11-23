@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css样式学习</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background-image: url(夜光.jpg);
+			background-repeat: no-repeat;
+			background-position: 30% 60%;
+			background-attachment:scroll;
+			background-size: 300px 300px;
+
+		}
+		#text{
+			text-indent:30px;
+			text-align: center;
+			text-decoration: blink;
+			text-transform: capitalize;
+			word-spacing: 30px;
+			letter-spacing: 5px;
+			line-height: 30px;
+
+
+		}
+		a[href="http://www.baidu.com"]:link{
+			color: green
+		}
+		a[href="http://www.baidu.com"]:visited{
+			color: red
+		}
+		a[href="http://www.baidu.com"]:hover{
+			color: blue
+		}
+		a[href="http://www.baidu.com"]:active{
+			color: yellow
+		}
+		h1{
+			text-align: center;
+			font-size: 50px;
+			color: yellow
+		}
+	</style>
+</head>
+<body>
+	<header id="页面头部">
+		<h1 >全文共分为以下部分</h1>
+		<nav>
+			<li><a href="#CSS选择器">CSS选择器</a></li>
+			<li><a href="#css样式">css样式</a></li>
+		</nav>
+	</header>
+	<article id="CSS选择器">
+		<header>
+			<h1>这里是选择器，选择出要设置样式的元素</h1>
+			<nav>
+				<ol type="a">
+					<li>元素选择器</li>
+					<li>类选择器</li>
+					<li>id组按择期</li>
+					<li>派生选择器</li>
+					<li>属性选择器</li>
+					<li>选择器组合</li>
+				</ol>
+			</nav>
+			<section>
+				<h2>元素选择器</h2>
+				<p>元素选择器根据给定标签进行选择</p>
+			</section>
+			<section class="class">
+				<h2>2 类选择器</h2>
+				<p class="class">类选择器</p>
+				类选择器，各个元素可以相同，可以通过类找所有对应元素（不知道属性出现在那个元素），也可以通过元素指定类找相应元素（知道属性出现在那个元素）
+			</section>
+			<section >
+				<h2>3 id选择器</h2>
+				<p id="id">这是一个id选择器</p>
+				这个元素只出现一次，我们只知道这个元素出现了一次，但是我们不知道id出现在哪个元素上
+			</section>
+			<section id="pai">
+				<h2>4 派生选择器</h2>
+				<p>派生选择器相当于后代，中间用空格，可以组合标签，类，id进行组合使用</p>
+				<p>与后代选择器相比，子元素选择器（Child selectors）只能选择作为某元素子元素的元素</p>
+			</section>
+			<section>
+				<h2 >5 属性选择器</h2>
+				<p title="">属性选择器有三种</p>
+				<ul>
+					<li>1、只指定属性，不指定值</li>
+					<li>2、指定属性，指定值，等级高于1</li>
+					<li>3、既可以在前面写出标签、也可以不写出标签</li>
+				</ul>
+			</section>
+			<section>
+				<h2>6 选择器分组</h2>
+				<p>通过逗号，可以与标签、id、类、派生属性结合、一次性完成多个元素同样式</p>
+			</section>
+		</header>
+	</article>
+	<article id="css样式">
+		<header>
+			<h1>css样式</h1>
+		</header>
+		<section>
+			<h2>1 背景background是背景属性简写一次性可以设置所有属性</h2>
+			<ul>
+				<li>背景颜色</li>
+				<li>背景图片</li>
+			</ul>
+			<section id="background-color">
+				<h3>背景颜色</h3>
+				<p>背景颜色可以由四中合法输入</p>
+				<ul>
+					<li id="cli1">yellow</li>
+					<li id="cli2">#00ff00</li>
+					<li id="cli3">rgb(250,0,250)</li>
+					<li id="cli4">rgb(25%,20%,45%)</li>
+					<li id="cli5">默认是透明</li>
+				</ul>
+				<p>padding属性值可以增添背景填充色的上下内边距</p>
+			</section>
+			<section>
+				<h3>背景图片
+				</h3>
+				<p>使用样式可以对任何元素设置背景，而使用属性只能对部分元素使用</p>
+				<ul>
+					<li>background-repeat(repeat/repeat-x/repeat-y/no-repeat)</li>
+					<li>background-position</li>
+					<ul>
+						<li>top、bottom、left、right 和 center成对出现左边是水平、右边是上下</li>
+						<li>百分数，表示左右留出空白占比</li>
+						<li>像素值表示图像左上角顶点偏移量</li>
+					</ul>
+					<li>background-attachmen(图片没充满页面是否滚动fixed)</li>
+					<li>backrround-size(?px ?px)表示背景图片大小</li>
+				</ul>
+			</section>
+		</section>
+		<section >
+			<h2>2 文本</h2>
+			<a href="文本.png">点击这里查看文本属性</a>
+			<ul id="text">
+				<li>text-indent(块元素首行缩进，可以为负数，可以使用百分比)</li>
+				<li>text-align(文本对齐方式，左中右)</li>
+				<li>word-spacing(单词间隔)</li>
+				<li>letter-spacing(字符间隔)</li>
+				<li>text-transform(大小写转换none/uppercase/lowercase/capitalize)</li>
+				<li>text-decoration(none/underline/overline/line-through/blink)</li>
+				<li>文本颜色直接用color属性，背景颜色用第一部分background-color属性</li>
+				<li>line-height（设置行高）</li>
+			</ul>
+		</section>
+		<section>
+			<h2>3 文本font通用属性一次性设置</h2>
+			<ul>
+				<li>font-family设置字体，可以按照优先级将要设置的字体写出来，字体名有空格则需要引号</li>
+				<li>font-style(normal - 文本正常显示italic - 文本斜体显示oblique - 文本倾斜显示)</li>
+				<li>font-variant 属性可以设定小型大写字母</li>
+				<li>font-weight 属性设置文本的粗细100-900代表不同等级400正常，700=bold</li>
+				<li>font-size 属性设置文本的大小</li>
+			</ul>
+		</section>
+		<section>
+			<h2>4 链接</h2>
+			<p>链接的四种状态</p>
+			<ul>
+				<li>a:link - 普通的、未被访问的链接</li>
+				<li>a:visited - 用户已访问的链接</li>
+				<li>a:hover - 鼠标指针位于链接的上方</li>
+				<li>a:active - 链接被点击的时刻</li>
+				<a href="http://www.baidu.com" >这是个链接</a>
+			</ul>
+		</section>
+		<section>
+			<h2>5 列表list-style一次性设置所有的</h2>
+			<ul>
+				<li>有序列表ol（i I A a 1）</li>
+				<li>无序列表ul(circle/square/disc)</li>
+				<li>list-style-image标志图像</li>
+				<li>list-style-position标志位置(inside/outside)</li>
+				<li>list-style-tyoe标志类型(有区分)</li>
+			</ul>
+		</section>
+		<section>
+			<h2>6 表格</h2>
+			<ul>
+				<li>border表框，整个表格有边框，单元格有边框</li>
+				<li>border-collapse边框折叠为一个</li>
+				<li>width 和 heigh设置宽度和高度</li>
+				<li>text-align 和 vertical-align对齐方式</li>
+				<li>padding和spacing设置间距</li>
+			</ul>
+		</section>
+		<section>
+			<h2>7 轮廓outline统一设置</h2>
+			<ul>
+				<li>outline-style样式</li>
+				<li>outline-color颜色</li>
+				<li>outline-width宽度</li>
+			</ul>
+		</section>
+	</article>
+	<article>
+		<header>
+			<h1>块框架盒子</h1>
+			<p>框架由内容、内边距、边框、外边距四部分构成盒子都可以简写或者逐个设置</p>
+		</header>
+		<section>
+			<h2>1、内边距padding</h2>
+			<p>可以使用数值、百分比</p>
+			<ul>
+				<li>padding简写统一设置（top right bottom left）</li>
+				<li>padding-top</li>
+				<li>padding-right</li>
+				<li>padding-bottom</li>
+				<li>padding-left</li>
+			</ul>
+		</section>
+		<section>
+			<h2>2、边框border</h2>
+			<p>边框有颜色、类型、宽度、统已设置时候可以对所有边按照属性设置，也可以对一个边设置所有属性</p>
+			<ul>
+				<li>border简写统一设置</li>
+				<li>border-style简写统一设置</li>
+				<li>border-color简写统一设置</li>
+				<li>border-width简写统一设置</li>
+			</ul>
+		</section>
+		<section>
+			<h2>3、外边距margin</h2>
+			<p>外边距只有宽度、可以为负值、可以统一设置或者分别设置、不同块外边距默认按照最大的合并</p>
+			<ul>
+				<li>margin统一设置</li>
+				<li>margin-right</li>
+				<li>margin-top</li>
+				<li>margin-bottom</li>
+				<li>margin-left</li>
+			</ul>
+		</section>
+		<section>
+			<h2>4、内容</h2>
+			<p>可以设置像素百分比等等</p>
+			<ul>
+				<li>width内容宽</li>
+				<li>height内容高</li>
+			</ul>
+		</section>
+	</article>
+	<article>
+		<header>
+			<h1>定位</h1>
+			<p>定位指的是确定一个块元素在文档流中的位置</p>
+		</header>
+		<section>
+			<h2>定位的种类</h2>
+			<h3>position（left right top bottom便宜）可以使用固定值和百分比</h3>
+			<ul>
+				<li>static静态的原本就有的定位</li>
+				<li>relative相对定位不会从文档流删除，定位元素有可能重叠</li>
+				<li>absolute绝对定位彻底会从文档流删除，定位元素有可能重叠</li>
+				<li>absolute绝对定位彻底会从文档流删除，定位元素有可能重叠，以窗体定位</li>
+			</ul>
+			<h3>float以某种方式删除，但是会影响后面元素文本，并且定位元素不能重叠</h3>
+		</section>
+	</article>
+	<article>
+		<header>
+			<h1>css高级</h1>
+			<p>高级讲了除了一些基本样式（基本，位置，块元素）之外的东西</p>
+		</header>
+		<ul>
+			<li>对其使用margin/position/float</li>
+			<li>尺寸 height/width /max/min</li>
+			<li>属性 cursor可以设置鼠标指针的样式</li>
+			<li>导航栏 让列表类型消失，并且在一行显示 </li>
+			<li>图片透明使用：opacity</li>
+		</ul>
+	</article>
+
+</body>
+</html>
